@@ -6,6 +6,7 @@ module.exports = {
 
       colors:{
         cardBG :'#969696',
+        cardDetailsBG: '#EDEDED',
       }
     },
   },

@@ -14,21 +14,21 @@ import { PEOPLE_DETAILS } from "../cardData"
 export default function CardDetails(){
 
     const peopleDetails = PEOPLE_DETAILS.map((people) =>
-    <div class="bg-white w-96 mt-10 ml-10 border-1 p-2 border-black" key ={people.name}>
-        <div class="bg-cardBG h-20 text-red-500">
+    <div class="bg-white w-96 mt-10 ml-10 border-2 border-gray-200 rounded-md" key ={people.name}>
+        <div class="bg-cardBG h-20 text-white">
         <img src={card} alt="Card logo" className="fill-white" />
         <h4>{people.name}</h4>
         </div>
         
         <ul>
-        <li><img className="inline" src={ people.gender === 'male' ? male : female } alt="gender" ></img> <h4 className="inline m">{people.gender} </h4></li>
+        <li ><img className="inline " src={ people.gender === 'male' ? male : female }alt="gender" /> <h4 className="inline m">{people.gender} </h4></li>
 
         <li> {people.species}</li>
+        <hr/>
 
-
-        <li> <img src={homeWorld} alt="homeworld" className="inline"/>HomeWorld <h4>{people.homeworld}</h4></li>
-        <li> <img src={vehicle} alt="vehicle" className="inline"/>Vehicle<h4>{people.vehicles}</h4></li>
-        <li> <img src={starShip} alt="starship" className="inline"/>Starship <h4>{people.starships}</h4></li>
+        <li className='bg-cardDetailsBG mt-2 mb-2 rounded-md border-2 pl-1 border-gray-100'> <img src={homeWorld} alt="homeworld" className="inline"/>HomeWorld <h4 className="inline">{people.homeworld}</h4></li>
+        <li className='bg-cardDetailsBG mt-2 mb-2 rounded-md border-2 border-gray-100'> <img src={vehicle} alt="vehicle" className="inline"/>Vehicle<h4 className="inline">{people.vehicles}</h4></li>
+        <li className='bg-cardDetailsBG mt-2 mb-2 rounded-md border-2 border-gray-100'> <img src={starShip} alt="starship" className="inline"/>Starship <h4 className="inline">{people.starships}</h4></li>
         </ul>
 
     </div>)
