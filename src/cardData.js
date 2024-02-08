@@ -2,8 +2,8 @@
 //https://www.youtube.com/@AdamWathan/videos
 export const PEOPLE_DETAILS =[
 
-{   name:'Keanu',
-    gender:'male',
+{   name:'Michelle woman',
+    gender:'female',
     birth_year: '19BBY',
     species : 'Human',
     homeworld:'Tatoonie', 
