@@ -14,10 +14,10 @@ import { PEOPLE_DETAILS } from "../cardData";
 export default function CardDetails() {
   const peopleDetails = PEOPLE_DETAILS.map((people) => (
     <div
-      class="bg-white md:w-80  h-64 border-2 ml-10  mt-10 border-gray-200 flex flex-col rounded-lg"
+      class="bg-white md:w-96 md:h-96  ml-10 mt-10  border-2 border-gray-200 flex flex-col rounded-lg"
       key={people.name}
     >
-      <div class="bg-cardBG text-white">
+      <div class="bg-cardBG text-white rounded-t-md">
         <img src={card} alt="Card logo" className=" p-2" />
         <h4 className="pl-2">{people.name}</h4>
       </div>

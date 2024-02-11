@@ -4,7 +4,7 @@
 
 /*creating a classes with the style for the card details */
 .cardInfo{
-  @apply flex justify-between m-2 rounded-sm bg-cardDetailsBG;
+  @apply flex justify-between m-2 rounded-sm bg-cardDetailsBG p-1;
 }
 .cardInfoIcon{
   @apply inline w-4 ml-1;
