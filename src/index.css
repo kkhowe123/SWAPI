@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/*creating a classes with the style for the card details */
+.cardInfo{
+  @apply flex justify-between m-2 rounded-sm bg-cardDetailsBG;
+}
+.cardInfoIcon{
+  @apply inline w-4 ml-1;
+}
+.cardInfoTitle{
+  @apply inline ml-0.5;
+}
+.cardInfoDetails{
+  @apply inline mr-2;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

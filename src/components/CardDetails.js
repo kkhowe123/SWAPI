@@ -36,47 +36,47 @@ export default function CardDetails() {
 
       <hr className="h-0 border-2 ml-2 mr-2 border-cardDetailsBG"/>
         <div className="text-sm mt-2">
-      <div className="flex justify-between m-2 rounded-sm bg-cardDetailsBG">
+      <div className="cardInfo">
       <div>
-        <img src={homeWorld} alt="homeworld" className="inline w-4 ml-1" />
-        <h3 className="inline ml-0.5">HomeWorld</h3>
+        <img src={homeWorld} alt="homeworld" className="cardInfoIcon" />
+        <h3 className="cardInfoTitle">HomeWorld</h3>
      </div>
-        <h4 className="inline mr-2">{people.homeworld}</h4>
+        <h4 className="cardInfoDetails">{people.homeworld}</h4>
       </div>
 
              
-   <div className="flex justify-between m-2 rounded-sm bg-cardDetailsBG">
+   <div className="cardInfo">
       <div>
-        <img src={vehicle} alt="vehicle" className="inline w-4 ml-1" />
-        <h3 className="inline ml-0.5">VEHICLE</h3>
+        <img src={vehicle} alt="vehicle" className="cardInfoIcon" />
+        <h3 className="cardInfoTitle">VEHICLE</h3>
      </div>
         <h4 className="inline mr-2 ">{people.vehicles}</h4>
       </div>
 
-      <div className="flex justify-between m-2 rounded-sm bg-cardDetailsBG">
+      <div className="cardInfo">
       <div>
-        <img src={vehicle} alt="vehicle" className="inline w-4 ml-1" />
-        <h3 className="inline ml-0.5">VEHICLE</h3>
+        <img src={vehicle} alt="vehicle" className="cardInfoIcon" />
+        <h3 className="cardInfoTitle">VEHICLE</h3>
      </div>
-        <h4 className="inline mr-2 ">{people.vehicles}</h4>
+        <h4 className="cardInfoDetails ">{people.vehicles}</h4>
       </div>
 
 
 
-      <div className="flex justify-between m-2 rounded-sm bg-cardDetailsBG">
+      <div className="cardInfo">
       <div>
-        <img src={starShip} alt="starship" className="inline w-4 ml-1" />
-        <h3 className="inline ml-0.5">STARSHIP</h3>
+        <img src={starShip} alt="starship" className="cardInfoIcon" />
+        <h3 className="cardInfoTitle">STARSHIP</h3>
      </div>
-        <h4 className="inline mr-2">{people.starships}</h4>
+        <h4 className="cardInfoDetails">{people.starships}</h4>
       </div>
 
-      <div className="flex justify-between m-2 rounded-sm bg-cardDetailsBG">
+      <div className="cardInfo">
       <div>
-        <img src={starShip} alt="starship" className="inline w-4 ml-1" />
-        <h3 className="inline ml-0.5">STARSHIP</h3>
+        <img src={starShip} alt="starship" className="cardInfoIcon" />
+        <h3 className="cardInfoTitle">STARSHIP</h3>
      </div>
-        <h4 className="inline mr-2">{people.starships}</h4>
+        <h4 className="cardInfoDetails">{people.starships}</h4>
       </div>
       </div>
 
