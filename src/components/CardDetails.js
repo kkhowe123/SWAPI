@@ -11,7 +11,7 @@ import vehicle from "../assets/Vehicle.svg";
 
 import { PEOPLE_DETAILS } from "../cardData";
 
-export default function CardDetails() {
+export default function CardDetails({name,homeworld})  {
   const peopleDetails = PEOPLE_DETAILS.map((people) => (
     <div
       class="bg-white md:w-96 md:h-96  ml-10 mt-10  border-2 border-gray-200 flex flex-col rounded-lg"
@@ -19,7 +19,7 @@ export default function CardDetails() {
     >
       <div class="bg-cardBG text-white rounded-t-md">
         <img src={card} alt="Card logo" className=" p-2" />
-        <h4 className="pl-2">{people.name}</h4>
+        <h4 className="pl-2">{name}</h4>
       </div>
 
       <div className="text-sm w-full flex justify-between items-center mb-1 mt-1">
@@ -41,7 +41,7 @@ export default function CardDetails() {
         <img src={homeWorld} alt="homeworld" className="cardInfoIcon" />
         <h3 className="cardInfoTitle">HomeWorld</h3>
      </div>
-        <h4 className="cardInfoDetails">{people.homeworld}</h4>
+        <h4 className="cardInfoDetails">{homeworld}</h4>
       </div>
 
              
@@ -82,10 +82,5 @@ export default function CardDetails() {
 
     </div>
   ));
-  {
-    /* <
-<li className='bg-cardDetailsBG mt-2 mb-2 rounded-md border-2 border-gray-100'> <img src={vehicle} alt="vehicle" className="inline"/>Vehicle<h4 className="inline">{people.vehicles}</h4></li>
-<li className='bg-cardDetailsBG mt-2 mb-2 rounded-md border-2 border-gray-100'> <img src={starShip} alt="starship" className="inline"/>Starship <h4 className="inline">{people.starships}</h4></li> */
-  }
   return <>{peopleDetails}</>;
 }
