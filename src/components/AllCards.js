@@ -2,6 +2,9 @@ import React from "react";
 import HomeLayout from "./HomeLayout";
 import navArrow from "../assets/nav_arrow.svg";
 import Search from "./Search";
+import Sort from "./Sort";
+import PeopleDetails from "./PeopleDetails"
+import AllCardsDetailsView from "./AllCardsDetailsView";
 export default function AllCards (){
     
 
@@ -17,10 +20,13 @@ export default function AllCards (){
         <h6>Select A Card</h6>
         </div>
 
-        <div className="mt-[40px] ml-[90px]">
+        <div className="mt-[40px] ml-[90px] flex">
             <Search />    
+            <Sort />
         </div>    
-
+        <div className="flex flex-wrap ml-[90px] mt-[24px]">
+        <PeopleDetails />
+        </div>
         </div>
         
         </>

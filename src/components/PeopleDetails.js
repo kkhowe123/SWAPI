@@ -1,5 +1,6 @@
 import { useEffect, useState} from "react";
 import CardDetails from './CardDetails';
+import AllCardsDetailsView from "./AllCardsDetailsView";
  const PeopleDetails = () =>{
 
     const [peopleData, setPeopleData] = useState([]);
@@ -26,7 +27,7 @@ import CardDetails from './CardDetails';
             <>
                 {peopleData.map((people) => (
                 
-                    <CardDetails key={people.name} name={people.name} homeworld={people.homeworld} />
+                    <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starships} />
                 ))}
            
             </>
