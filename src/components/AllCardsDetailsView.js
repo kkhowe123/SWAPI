@@ -3,11 +3,12 @@ import PeopleDetails from "./PeopleDetails";
 import card from "../assets/Card.svg"; 
 import plus from "../assets/plus.svg"
 import male from "../assets/Gender-Male.svg"
+import female from "../assets/Gender-Female.svg"
 import vehiclesIcon from "../assets/Vehicle.svg"
 import starShipsIcon from "../assets/Starship.svg"
 import homeworldIcon from "../assets/Homeworld.svg"
 
-export default function AllCardsDetailsView({name, birth_year,species,homeworld,vehicles,starships})
+export default function AllCardsDetailsView({name, birth_year,species,homeworld,vehicles,starships,gender})
 {
 
 
@@ -28,7 +29,7 @@ export default function AllCardsDetailsView({name, birth_year,species,homeworld,
 
         <div className="bg-[#FFFFFF] pr-[16px] pl-[16px] pt-[10px] h-[190px] pb-[20px] rounded-[4px]">        
           <div className="flex justify-between mb-[6px] text-[14px]">
-          <img src={male} alt="Male" />
+          <img src={gender === "male" ? male : female    } alt="Male" />
         <h4 className="ml-[-70px]">{birth_year}</h4>
         <h4>Human</h4>
       
@@ -37,7 +38,7 @@ export default function AllCardsDetailsView({name, birth_year,species,homeworld,
         <div>
 
         <div className="flex justify-between pt-[2px] pb-[2px] mt-[2px] mb-[10px] bg-[#EDEDED] rounded-[4px] w-[184px] h-[32px]">
-          <img className="w-[16px] h-[16px] mt-[3px] ml-[6px]" src={homeworldIcon} alt="homeworld icon" />
+          <img className="w-[16px] h-[16px] mt-[4px] ml-[6px]" src={homeworldIcon} alt="homeworld icon" />
           <h4 className="text-[12px] ml-[-20px] mt-[3px]">Homeworld</h4> 
           <h4 className="text-[12px] pr-[5px] pt-[3px]">Homeworld</h4>
        
@@ -46,18 +47,18 @@ export default function AllCardsDetailsView({name, birth_year,species,homeworld,
         
 
         <div className="flex justify-between pt-[2px] pb-[2px] mt-[2px] mb-[10px] bg-[#EDEDED] rounded-[4px] w-[184px] h-[32px]">
-          <img className="w-[16px] h-[16px] mt-[3px]" src={vehiclesIcon} alt="vehicle icon" />
-          <h4 className="text-[12px] ml-[-70px] mt-[3px] ">Vehicle</h4> 
-          <h4 className="pr-[5px]" >0</h4>
+          <img className="w-[16px] h-[16px] mt-[4px] ml-[6px]" src={vehiclesIcon} alt="vehicle icon" />
+          <h4 className="text-[12px] ml-[-100px] mt-[3px] ">Vehicle</h4> 
+          <h4 className="pr-[5px] mt-[2px]" >0</h4>
           
           
           </div>  
         
 
         <div className="flex justify-between pt-[2px] pb-[2px] mt-[2px] mb-[10px] bg-[#EDEDED] rounded-[4px] w-[184px] h-[32px]">
-        <img className="w-[16px] h-[16px] mt-[3px]" src={starShipsIcon} alt="vehicle icon" />
-        <h4 className="text-[12px] ml-[-70px] mt-[3px]">starships</h4>
-         <h4  className="pr-[5px]">0
+        <img className="w-[16px] h-[16px] mt-[4px] ml-[6px]" src={starShipsIcon} alt="vehicle icon" />
+        <h4 className="text-[12px] ml-[-90px] mt-[4px]">starships</h4>
+         <h4  className="pr-[5px] mt-[2px]">0
           </h4> 
         </div>
         
