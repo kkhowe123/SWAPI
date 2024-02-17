@@ -13,7 +13,7 @@ export default function AllCards (){
     return (
         <>
         <HomeLayout />
-        <div className="mt-[48px]" >
+        <div className="mt-[28px]" >
         <div className="ml-[28px] md:ml-[189px] flex mt-[10px] lg:ml-[90px]">
         <h6>All Cards</h6>
         <img className="w-[16px]" src={navArrow} alt="nav arrow"/>
