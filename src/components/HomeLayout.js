@@ -11,7 +11,7 @@ return(
     <div className="flex justify-between w-[1176px] h-[32px] g-[16px]" > 
     
     <div className="w-[212px] h-[32px] " >
-        <button className="w-[112px] h-[32px] rounded-[4px] bg-[#FFFFFF] text-[16px]" > <img className="w-[16px] h-[16px] top-[0.5px] left[2.5px] inlines" src={card} alt="card icon" /> All Cards </button>
+        <button className="w-[112px] h-[32px] rounded-[4px] bg-[#FFFFFF] text-[16px]" > <img className="w-[16px] h-[16px] top-[0.5px] left[2.5px] inline" src={card} alt="card icon" /> All Cards </button>
 
 
         <button className="ml-[8px] w-[92px] h-[32px] rounded-[4px] bg-[#E4E4E4] " >
