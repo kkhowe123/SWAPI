@@ -37,7 +37,7 @@ export default function AllCardsDetailsView({name, birth_year,species,homeworld,
         <div>
 
         <div className="flex justify-between pt-[2px] pb-[2px] mt-[2px] mb-[10px] bg-[#EDEDED] rounded-[4px] w-[184px] h-[32px]">
-          <img className="w-[16px] h-[16px] mt-[3px] ml-[5px]" src={homeworldIcon} alt="homeworld icon" />
+          <img className="w-[16px] h-[16px] mt-[3px] ml-[6px]" src={homeworldIcon} alt="homeworld icon" />
           <h4 className="text-[12px] ml-[-20px] mt-[3px]">Homeworld</h4> 
           <h4 className="text-[12px] pr-[5px] pt-[3px]">Homeworld</h4>
        
