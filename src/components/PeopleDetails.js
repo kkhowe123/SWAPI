@@ -27,7 +27,7 @@ import AllCardsDetailsView from "./AllCardsDetailsView";
             <>
                 {peopleData.map((people) => (
                 
-                    <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starship} gender={people.gender} />
+                    <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starships} />
                 ))}
            
             </>
