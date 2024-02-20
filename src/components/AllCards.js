@@ -14,18 +14,18 @@ export default function AllCards (){
         <>
         <HomeLayout />
         <div className="mt-[48px]" >
-        <div className="flex mt-[10px] ml-[90px]">
+        <div className="ml-[28px] md:ml-[189px] flex mt-[10px] lg:ml-[90px]">
         <h6>All Cards</h6>
         <img className="w-[16px]" src={navArrow} alt="nav arrow"/>
         <h6>Select A Card</h6>
         </div>
 
-        <div className="mt-[40px] ml-[90px] flex">
+        <div className=" ml-[28px] mt-[40px] lg:ml-[90px] flex md:ml-[189px]">
             <Search />    
             <Sort />
         </div>    
-        <div className="flex flex-wrap ml-[90px] mt-[24px]">
-        <PeopleDetails />
+        <div className="md:ml-[189px] md:flex flex-wrap ml-[90px] mt-[24px]">
+        {/* <PeopleDetails /> */}
         </div>
         </div>
         

@@ -8,7 +8,7 @@ return(
     <div>
         <div className="relative">
         
-        <input className="rounded-[4px] w-[352px] h-[32px] pl-[8px]" placeholder="Search" />
+        <input className="max-w-[126px] rounded-[4px] lg:min-w-[352px] h-[32px] pl-[8px] " placeholder="Search" />
         <div className="absolute  inset-y-0 left-60 ml-20   
                     flex items-center  
                     pointer-events-none">
