@@ -48,7 +48,7 @@ export default function AllCardsDetailsView({name, birth_year,species,homeworld,
 
         <div className="flex justify-between pt-[2px] pb-[2px] mt-[2px] mb-[10px] bg-[#EDEDED] rounded-[4px] w-[184px] h-[32px]">
           <img className="w-[16px] h-[16px] mt-[4px] ml-[6px]" src={vehiclesIcon} alt="vehicle icon" />
-          <h4 className="text-[12px] ml-[-100px] mt-[3px] ">Vehicle</h4> 
+          <h4 className="text-[12px] ml-[-100px] mt-[3px] ">Vecle</h4> 
           <h4 className="pr-[5px] mt-[2px]" >0</h4>
           
           
