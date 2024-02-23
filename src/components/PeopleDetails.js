@@ -2,6 +2,7 @@ import { useEffect, useState} from "react";
 import CardDetails from './CardDetails';
 import AllCardsDetailsView from "./AllCardsDetailsView";
 import Pagination from "./Pagination";
+import pageLoader from "../assets/loader.gif"
  const PeopleDetails = () =>{
 
     const [peopleData, setPeopleData] = useState([]);
@@ -12,7 +13,12 @@ import Pagination from "./Pagination";
     const [error, setError] = useState();
 
 
-    
+        useEffect(() => {
+            setLoading(true);
+            setTimeout(() => {
+                setLoading(false)
+            }, 1800);
+        },[currentPage]);
 
         useEffect( () =>
         {
@@ -52,18 +58,32 @@ import Pagination from "./Pagination";
           };
         return(
             <>
+               {loading ? (
+                <div>
+                    <img className="ml-[500px] mt-[100px]"  src={pageLoader} />
+                </div>
+               ) :( 
+                <>
                 {peopleData.map((people) => (
                 
-                    <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starship} gender={people.gender} />
-                ))}
+                <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starship} gender={people.gender} />
+            ))}
+            
 
-        <div>
-            <Pagination setPageValue={setPage}/>
+    <div>
+    <Pagination setPageValue={setPage}/>
 
-        {/* <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-        <span>{currentPage} of {totalPages}</span>
-        <button onClick={nextPage} >Next</button> */}
-      </div>
+{/* <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
+<span>{currentPage} of {totalPages}</span>
+<button onClick={nextPage} >Next</button> */}
+</div>
+</>
+            )
+
+
+
+               }
+      
            
             </>
         );

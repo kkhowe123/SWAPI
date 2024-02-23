@@ -1,12 +1,12 @@
-fetch(`https://swapi.dev/api/people/?page=${currentPage}`)
-.then (response => {
-    if(!response.ok){
-        throw new Error ("Could not connect to the server");
-    }
-    return response.json();
+ {peopleData.map((people) => (
+                
+                    <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starship} gender={people.gender} />
+                ))}
 
-})
-.then(data => setPeopleData(data.results))
-.then(pageNum => setTotalPages(Math.ceil(pageNum.count / 15)))
-           
-.catch (error => setError(error));
+        <div>
+            <Pagination setPageValue={setPage}/>
+
+        {/* <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
+        <span>{currentPage} of {totalPages}</span>
+        <button onClick={nextPage} >Next</button> */}
+      </div>
