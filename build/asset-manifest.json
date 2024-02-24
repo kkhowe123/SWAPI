@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.d47a69b6.css",
-    "main.js": "/static/js/main.357394f5.js",
+    "main.css": "/static/css/main.6c0f22d0.css",
+    "main.js": "/static/js/main.3ff42961.js",
     "static/js/592.b1e3fe1d.chunk.js": "/static/js/592.b1e3fe1d.chunk.js",
+    "static/media/loader.gif": "/static/media/loader.14c1f99c1242915cc9bf.gif",
     "static/media/Starship.svg": "/static/media/Starship.606f6df9297ea5ea328ae32bb4d9c7e0.svg",
     "index.html": "/index.html",
     "static/media/Vehicle.svg": "/static/media/Vehicle.e1d0468481801ee034dad6ad96665350.svg",
@@ -14,12 +15,12 @@
     "static/media/plus.svg": "/static/media/plus.db8b029219c2b42bf8f9cc5afc47eb08.svg",
     "static/media/nav_arrow.svg": "/static/media/nav_arrow.4f94bcc326308c4842948f9c10b248fb.svg",
     "static/media/Search.svg": "/static/media/Search.b6dd0068b51492f364c4313f41feb22b.svg",
-    "main.d47a69b6.css.map": "/static/css/main.d47a69b6.css.map",
-    "main.357394f5.js.map": "/static/js/main.357394f5.js.map",
+    "main.6c0f22d0.css.map": "/static/css/main.6c0f22d0.css.map",
+    "main.3ff42961.js.map": "/static/js/main.3ff42961.js.map",
     "592.b1e3fe1d.chunk.js.map": "/static/js/592.b1e3fe1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d47a69b6.css",
-    "static/js/main.357394f5.js"
+    "static/css/main.6c0f22d0.css",
+    "static/js/main.3ff42961.js"
   ]
 }

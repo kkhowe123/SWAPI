@@ -17,7 +17,7 @@ import pageLoader from "../assets/loader.gif"
             setLoading(true);
             setTimeout(() => {
                 setLoading(false)
-            }, 1800);
+            }, 1700);
         },[currentPage]);
 
         useEffect( () =>
@@ -49,12 +49,12 @@ import pageLoader from "../assets/loader.gif"
             return(setCurrentPage(selectedPage))
         }
 
-        const nextPage = () => {
-            setCurrentPage(currentPage + 1);
+        const nextPage = (activePage) => {
+            setCurrentPage(activePage);
           };
         
-          const prevPage = () => {
-            setCurrentPage(currentPage - 1);
+          const prevPage = (activePage) => {
+            setCurrentPage(activePage);
           };
         return(
             <>
@@ -71,11 +71,8 @@ import pageLoader from "../assets/loader.gif"
             
 
     <div>
-    <Pagination setPageValue={setPage}/>
+    <Pagination setPageValue={setPage} nextPage={nextPage} prevPage={prevPage} currentPage={currentPage} />
 
-{/* <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-<span>{currentPage} of {totalPages}</span>
-<button onClick={nextPage} >Next</button> */}
 </div>
 </>
             )
