@@ -11,6 +11,11 @@ import pageLoader from "../assets/loader.gif"
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
+    const [morePagesStatus, setMorePagesStatus] = useState(false);
+    const [search, setSearch] = useState();
+
+
+
 
 
     {/*This useEffect below will be responsible for updating the page when we click the next and previous dbutton and the page nummbers . It also set a timeout to allow the loading animation to display*/}
@@ -48,6 +53,13 @@ import pageLoader from "../assets/loader.gif"
          // the current page variable below will be used to trigger the useEffect so each time the current page value changes the useEffect will run  
         },[currentPage]);
 
+        //this function is used to update the morepages states and show the other pages 
+        function setMorePages(pageStatus)
+        {
+            return(setMorePagesStatus(pageStatus))
+
+        }
+
         // function is used to update the crrent page state to allow switince of pages this will be pased to the Pagination component 
         function setPage(selectedPage)
         {
@@ -78,7 +90,7 @@ import pageLoader from "../assets/loader.gif"
 
     <div>
     {/* Using the pagination component to  display the the page numbers and also the next button*/}
-    <Pagination setPageValue={setPage} nextPage={nextPage} prevPage={prevPage} currentPage={currentPage} />
+    <Pagination setPageValue={setPage} nextPage={nextPage} prevPage={prevPage} currentPage={currentPage} setMorePagesStatus={setMorePages} morePagesStatus={morePagesStatus} />
 
 </div>
 </>
