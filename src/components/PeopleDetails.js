@@ -3,7 +3,7 @@ import CardDetails from './CardDetails';
 import AllCardsDetailsView from "./AllCardsDetailsView";
 import Pagination from "./Pagination";
 import pageLoader from "../assets/loader.gif"
- const PeopleDetails = () =>{
+ const PeopleDetails = ({search}) =>{
 
     const [peopleData, setPeopleData] = useState([]);
     // const [error, setError] = useState(null);
@@ -12,7 +12,9 @@ import pageLoader from "../assets/loader.gif"
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
     const [morePagesStatus, setMorePagesStatus] = useState(false);
-    const [search, setSearch] = useState();
+  
+        
+
 
 
 
@@ -53,6 +55,8 @@ import pageLoader from "../assets/loader.gif"
          // the current page variable below will be used to trigger the useEffect so each time the current page value changes the useEffect will run  
         },[currentPage]);
 
+        
+
         //this function is used to update the morepages states and show the other pages 
         function setMorePages(pageStatus)
         {
@@ -82,7 +86,11 @@ import pageLoader from "../assets/loader.gif"
                 </div>
                ) :( 
                 <>
-                {peopleData.map((people) => (
+                {peopleData.filter((item) =>{
+                    return(search.toLowerCase()===''? item:
+                    item.name.toLowerCase().includes(search)
+                    );
+                } ).map((people) => (
                 //all card details view componenet below to display the details for each card 
                 <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starship} gender={people.gender} />
             ))}
