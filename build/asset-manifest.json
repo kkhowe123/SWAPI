@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6c0f22d0.css",
-    "main.js": "/static/js/main.3ff42961.js",
+    "main.css": "/static/css/main.410bbdba.css",
+    "main.js": "/static/js/main.e36cc674.js",
     "static/js/592.b1e3fe1d.chunk.js": "/static/js/592.b1e3fe1d.chunk.js",
     "static/media/loader.gif": "/static/media/loader.14c1f99c1242915cc9bf.gif",
     "static/media/Starship.svg": "/static/media/Starship.606f6df9297ea5ea328ae32bb4d9c7e0.svg",
@@ -13,14 +13,15 @@
     "static/media/Deck.svg": "/static/media/Deck.6d354f0db16b1c4555ba885131110bd8.svg",
     "static/media/Gender-Male.svg": "/static/media/Gender-Male.076179583547fdec6fb80447cdb1f727.svg",
     "static/media/plus.svg": "/static/media/plus.db8b029219c2b42bf8f9cc5afc47eb08.svg",
+    "static/media/nav_arrowL.svg": "/static/media/nav_arrowL.c3657d4e82527af6d358d38192433e7b.svg",
     "static/media/nav_arrow.svg": "/static/media/nav_arrow.4f94bcc326308c4842948f9c10b248fb.svg",
     "static/media/Search.svg": "/static/media/Search.b6dd0068b51492f364c4313f41feb22b.svg",
-    "main.6c0f22d0.css.map": "/static/css/main.6c0f22d0.css.map",
-    "main.3ff42961.js.map": "/static/js/main.3ff42961.js.map",
+    "main.410bbdba.css.map": "/static/css/main.410bbdba.css.map",
+    "main.e36cc674.js.map": "/static/js/main.e36cc674.js.map",
     "592.b1e3fe1d.chunk.js.map": "/static/js/592.b1e3fe1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c0f22d0.css",
-    "static/js/main.3ff42961.js"
+    "static/css/main.410bbdba.css",
+    "static/js/main.e36cc674.js"
   ]
 }

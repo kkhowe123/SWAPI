@@ -13,11 +13,13 @@ import pageLoader from "../assets/loader.gif"
     const [error, setError] = useState();
 
 
+    {/*This useEffect below will be responsible for updating the page when we click the next and previous dbutton and the page nummbers . It also set a timeout to allow the loading animation to display*/}
         useEffect(() => {
             setLoading(true);
             setTimeout(() => {
                 setLoading(false)
-            }, 1700);
+            }, 600);
+
         },[currentPage]);
 
         useEffect( () =>
@@ -25,6 +27,7 @@ import pageLoader from "../assets/loader.gif"
             fetch(`https://swapi.dev/api/people/?page=${currentPage}`)
             .then (response => {
                 if(!response.ok){
+                    // this will throw an error if we are unable to connect to the server
                     throw new Error ("Could not connect to the server");
                 }
                 return response.json();
@@ -32,6 +35,7 @@ import pageLoader from "../assets/loader.gif"
             })
             .then(data => {
                 setPeopleData(data.results)
+                // this  set the total page numbers for the pagination 
                 setTotalPages (Math.ceil(data.count/10))
             })
             
@@ -41,23 +45,25 @@ import pageLoader from "../assets/loader.gif"
              
 
         
-           
+         // the current page variable below will be used to trigger the useEffect so each time the current page value changes the useEffect will run  
         },[currentPage]);
 
+        // function is used to update the crrent page state to allow switince of pages this will be pased to the Pagination component 
         function setPage(selectedPage)
         {
             return(setCurrentPage(selectedPage))
         }
-
+            // this is used to to update the current page state this will allow switching pages using the next button this function will be passed to the pagination component 
         const nextPage = (activePage) => {
             setCurrentPage(activePage);
           };
-        
+        // this is used to to update the current page state this will allow switching pages using the previous  button this function will be passed to the pagination component 
           const prevPage = (activePage) => {
             setCurrentPage(activePage);
           };
         return(
             <>
+            {/*  The below is responsible for rendering the card details to the screen. This is also responsible for the loading screen animation */}
                {loading ? (
                 <div>
                     <img className="ml-[500px] mt-[100px]"  src={pageLoader} />
@@ -65,12 +71,13 @@ import pageLoader from "../assets/loader.gif"
                ) :( 
                 <>
                 {peopleData.map((people) => (
-                
+                //all card details view componenet below to display the details for each card 
                 <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starship} gender={people.gender} />
             ))}
             
 
     <div>
+    {/* Using the pagination component to  display the the page numbers and also the next button*/}
     <Pagination setPageValue={setPage} nextPage={nextPage} prevPage={prevPage} currentPage={currentPage} />
 
 </div>

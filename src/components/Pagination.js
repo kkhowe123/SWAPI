@@ -4,12 +4,16 @@ import prevIcon from "../assets/nav_arrowL.svg"
 
 export default function Pagination({setPageValue, nextPage, prevPage, currentPage}){
 
+  
+  //This function is responsible for passing the variable to the parent calss to update the  current page
   function handleClick(pageNum)
   {
     return(pageNum);
 
   }
 
+
+  // //This function is responsible for passing the variable to the parent calss to update the  current page but in an incrimented way. This aid with the function of the next button 
   function handleNext(activePage){
       return(activePage + 1)
   }
