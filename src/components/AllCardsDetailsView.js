@@ -1,5 +1,4 @@
 import React from "react";
-import PeopleDetails from "./PeopleDetails";
 import card from "../assets/Card.svg"; 
 import plus from "../assets/plus.svg"
 import male from "../assets/Gender-Male.svg"
@@ -8,7 +7,7 @@ import vehiclesIcon from "../assets/Vehicle.svg"
 import starShipsIcon from "../assets/Starship.svg"
 import homeworldIcon from "../assets/Homeworld.svg"
 
-export default function AllCardsDetailsView({name, birth_year,species,homeworld,vehicles,starships,gender})
+export default function AllCardsDetailsView({peopleData})
 {
 
 
@@ -23,14 +22,14 @@ export default function AllCardsDetailsView({name, birth_year,species,homeworld,
             <img className="w-[15px] h-[15px]" src={plus} alt="Plus Icon" />
             </div>
             </div>
-            <h4 className="ml-[18px] mt-[20px] mb-[10px] " >{name}</h4>
+            <h4 className="ml-[18px] mt-[20px] mb-[10px] " >{peopleData.name}</h4>
             
         </div>
 
         <div className="bg-[#FFFFFF] pr-[16px] pl-[16px] pt-[10px] h-[190px] pb-[20px] rounded-[4px]">        
           <div className="flex justify-between mb-[6px] text-[14px]">
-          <img src={gender === "male" ? male : female    } alt="Male" />
-        <h4 className="ml-[-70px]">{birth_year}</h4>
+          <img src={peopleData.gender === "male" ? male : female    } alt="Male" />
+        <h4 className="ml-[-70px]">{peopleData.birth_year}</h4>
         <h4>Human</h4>
       
         </div>

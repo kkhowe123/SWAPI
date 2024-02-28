@@ -1,8 +1,10 @@
 import { useEffect, useState} from "react";
+import React from "react";
+import axios from "axios";
 import CardDetails from './CardDetails';
 import AllCardsDetailsView from "./AllCardsDetailsView";
 import Pagination from "./Pagination";
-import pageLoader from "../assets/loader.gif"
+import pageLoader from "../assets/loader.gif";
  const PeopleDetails = ({search}) =>{
 
     const [peopleData, setPeopleData] = useState([]);
@@ -12,6 +14,7 @@ import pageLoader from "../assets/loader.gif"
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
     const [morePagesStatus, setMorePagesStatus] = useState(false);
+    
   
         
 
@@ -20,7 +23,7 @@ import pageLoader from "../assets/loader.gif"
 
 
 
-    {/*This useEffect below will be responsible for updating the page when we click the next and previous dbutton and the page nummbers . It also set a timeout to allow the loading animation to display*/}
+    /*This useEffect below will be responsible for updating the page when we click the next and previous dbutton and the page nummbers . It also set a timeout to allow the loading animation to display*/
         useEffect(() => {
             setLoading(true);
             setTimeout(() => {
@@ -31,6 +34,7 @@ import pageLoader from "../assets/loader.gif"
 
         useEffect( () =>
         {
+            
             fetch(`https://swapi.dev/api/people/?page=${currentPage}`)
             .then (response => {
                 if(!response.ok){
@@ -56,6 +60,33 @@ import pageLoader from "../assets/loader.gif"
         },[currentPage]);
 
         
+        useEffect( () =>
+        {
+            
+            fetch(`https://swapi.dev/api/people/?search=${search}`)
+            .then (response => {
+                if(!response.ok){
+                    // this will throw an error if we are unable to connect to the server
+                    throw new Error ("Could not connect to the server");
+                }
+                return response.json();
+            
+            })
+            .then(data => {
+                setPeopleData(data.results)
+                // this  set the total page numbers for the pagination 
+                setTotalPages (Math.ceil(data.count/10))
+            })
+            
+            
+                       
+            .catch (error => setError(error));
+             
+
+        
+         // the current page variable below will be used to trigger the useEffect so each time the current page value changes the useEffect will run  
+        },[search]);
+
 
         //this function is used to update the morepages states and show the other pages 
         function setMorePages(pageStatus)
@@ -92,13 +123,13 @@ import pageLoader from "../assets/loader.gif"
                     );
                 } ).map((people) => (
                 //all card details view componenet below to display the details for each card 
-                <AllCardsDetailsView key={people.name} name={people.name} birth_year ={people.birth_year} species={people.species} homeworld={people.homeworld} vehicles={people.vehicles} starships ={people.starship} gender={people.gender} />
+                <AllCardsDetailsView key={people.name} peopleData={people} />
             ))}
             
 
     <div>
     {/* Using the pagination component to  display the the page numbers and also the next button*/}
-    <Pagination setPageValue={setPage} nextPage={nextPage} prevPage={prevPage} currentPage={currentPage} setMorePagesStatus={setMorePages} morePagesStatus={morePagesStatus} />
+    <Pagination setPageValue={setPage} nextPage={nextPage} prevPage={prevPage} currentPage={currentPage} setMorePagesStatus={setMorePages} morePagesStatus={morePagesStatus}  totalPages={9}/>
 
 </div>
 </>

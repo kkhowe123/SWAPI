@@ -4,8 +4,7 @@ import navArrow from "../assets/nav_arrow.svg";
 import Search from "./Search";
 import Sort from "./Sort";
 import { useState } from "react";
-import PeopleDetails from "./PeopleDetails"
-import AllCardsDetailsView from "./AllCardsDetailsView";
+import PeopleDetails from "./PeopleDetails";
 export default function AllCards (){
     
     const [search, setSearch] = useState("");
