@@ -14,15 +14,35 @@ import pageLoader from "../assets/loader.gif";
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
     const [morePagesStatus, setMorePagesStatus] = useState(false);
+
+    const sortData = [...peopleData].sort((a,b)=> 
+    {
+        const firstYear = getYear(a.birth_year);
+        const secondYear = getYear(b.birth_year);
+        return   secondYear - firstYear;
+
+    }
     
-  
-        
+    
+    );
+    console.log(sortData);
+    
+    function getYear(year)
+    {   
+        if(year === "unknown")
+        {
+            return Infinity;
+        }
 
+        else{
 
+        const birthYear = parseFloat(year.replace(/[^\d.]/g, ''));
+        return isNaN(birthYear) ? Infinity : birthYear;
 
+        }
 
-
-
+    }
+    
     /*This useEffect below will be responsible for updating the page when we click the next and previous dbutton and the page nummbers . It also set a timeout to allow the loading animation to display*/
         useEffect(() => {
             setLoading(true);
@@ -117,7 +137,7 @@ import pageLoader from "../assets/loader.gif";
                 </div>
                ) :( 
                 <>
-                {peopleData.filter((item) =>{
+                {sortData.filter((item) =>{
                     return(search.toLowerCase()===''? item:
                     item.name.toLowerCase().includes(search)
                     );
@@ -129,7 +149,7 @@ import pageLoader from "../assets/loader.gif";
 
     <div>
     {/* Using the pagination component to  display the the page numbers and also the next button*/}
-    <Pagination setPageValue={setPage} nextPage={nextPage} prevPage={prevPage} currentPage={currentPage} setMorePagesStatus={setMorePages} morePagesStatus={morePagesStatus}  totalPages={9}/>
+    <Pagination setPageValue={setPage} nextPage={nextPage} prevPage={prevPage} currentPage={currentPage} setMorePagesStatus={setMorePages} morePagesStatus={morePagesStatus}  totalPages={totalPages}/>
 
 </div>
 </>

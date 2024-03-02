@@ -35,7 +35,7 @@ function handleMorePagesClick(active)
     return (activePage - 1)
 
   }
-
+ 
     const paginationNumbers = [];
 
     for (let i = 1; i <= totalPages; i++) {
